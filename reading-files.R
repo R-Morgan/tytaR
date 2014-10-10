@@ -156,8 +156,8 @@ p2 + geom_histogram(aes(fill = educ))
 # Here's a neato trick with fill.  Fill allows for more information to be
 # in histogrammes and other types of bar graphs.
 
-p3 <- ggplot(demo, aes(x = educ))
-p3 + geom_histogram(aes(fill = sex)) + coord_flip()
+p3 <- ggplot(demog, aes(x = educ))
+p3 + geom_histogram(aes(fill = gender)) + coord_flip()
 # Here, the x variable and the fill have been switched up, leading to a more
 # readable graph.  The final argument, coord_flip() turn the graph on its side!
 
@@ -168,6 +168,11 @@ p3 + geom_histogram(aes(fill = sex)) + coord_flip()
 # Having seen some of how one constrcts graphs with ggplot2, describe the syntax
 # of a ggplot2 command.
 #
-# A fantastic resource for ggplot2 can be found at:
+# A fantastic resource for ggplot2's geom_bar can be found at:
 # http://docs.ggplot2.org/current/geom_bar.html). This is a portion of the
-# ggplot2 book that it's author, Hadley Wickham, has put online. 
+# ggplot2 book that it's author, Hadley Wickham, has put online. Use this page
+# to construct other graphs with the histogram or bar geoms. 
+#
+# Another useful exercise would be to use ggplot2's facet feature to display two
+# separate graphs.  For instance, one could output a graph of education for both
+# men and women. Research facet_wrap() to learn how to do this.
