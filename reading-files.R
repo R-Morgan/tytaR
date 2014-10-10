@@ -153,7 +153,21 @@ p2 + geom_histogram()
 # colour of the bars? Remember the aesthetic mapping function!
 
 p2 + geom_histogram(aes(fill = educ))
-# Here's a neato trick with fill.  Fill c
+# Here's a neato trick with fill.  Fill allows for more information to be
+# in histogrammes and other types of bar graphs.
 
-p2 + geom_histogram(aes(fill = educ)) + coord_flip()
+p3 <- ggplot(demo, aes(x = educ))
+p3 + geom_histogram(aes(fill = sex)) + coord_flip()
+# Here, the x variable and the fill have been switched up, leading to a more
+# readable graph.  The final argument, coord_flip() turn the graph on its side!
 
+########
+# EC   #
+########
+#
+# Having seen some of how one constrcts graphs with ggplot2, describe the syntax
+# of a ggplot2 command.
+#
+# A fantastic resource for ggplot2 can be found at:
+# http://docs.ggplot2.org/current/geom_bar.html). This is a portion of the
+# ggplot2 book that it's author, Hadley Wickham, has put online. 
