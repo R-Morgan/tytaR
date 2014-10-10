@@ -117,9 +117,43 @@ ggplot(exams, aes(x = sex, y = grade)) + geom_boxplot()
 #
 # Run this and see what happens.  You can save the result from the right panel
 # in RStudio, if you'd like.
+#
+# What do the whiskers on the boxplot mean?  What does it mean that the female
+# box is more stretched out than the male?
 
 ggplot(exams, aes(x = sex, y = grade)) + geom_boxplot(aes(fill = sex))
+# This addition of aes(fill = sex) to the boxplot specification automatically
+# files in the colours of each category.
+
+p1 <- ggplot(exams, aes(x = sex, y = grade)) 
+p1 + geom_boxplot(aes(fill = sex))
+# Explain what you think is going on here. Why might this be useful?
+
+###############################################################################
+# Now we're going to play with a bit of categorical data.
 
 
+demog <- read.spss(file="~/psy_621/assigment_2/demographs.sav", to.data.frame = T)
+# This makes a new data frame for us to work with.
 
+str(demog)
+# I love the str() function because it tells so much about the structure of your
+# vector/matrix/dataframe. You can learn the type of each column and learn the 
+# object's size. What are the types of the columns of the data.frame?  Compare 
+# the types of 'exams' and 'demog'.
+
+summary(demog)
+# The summary() function is quite useful. This function can be called on a
+# variety of data types. Try using both str() and summary() on new objects that
+# result from reading in .sav and .csv files.
+
+p2 <- ggplot(demog, aes(x = gender))
+p2 + geom_histogram()
+# This pair of statements output a ggplot histogramme! How can we change the
+# colour of the bars? Remember the aesthetic mapping function!
+
+p2 + geom_histogram(aes(fill = educ))
+# Here's a neato trick with fill.  Fill c
+
+p2 + geom_histogram(aes(fill = educ)) + coord_flip()
 
