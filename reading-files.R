@@ -171,8 +171,10 @@ p3 + geom_histogram(aes(fill = gender)) + coord_flip()
 # A fantastic resource for ggplot2's geom_bar can be found at:
 # http://docs.ggplot2.org/current/geom_bar.html). This is a portion of the
 # ggplot2 book that it's author, Hadley Wickham, has put online. Use this page
-# to construct other graphs with the histogram or bar geoms. 
+# to construct other graphs with the histogram or bar geoms. It's full of
+# example of what you can do with the library along with the code to generate
+# them.
 #
 # Another useful exercise would be to use ggplot2's facet feature to display two
 # separate graphs.  For instance, one could output a graph of education for both
-# men and women. Research facet_wrap() to learn how to do this.
+# men and women. Research facet_wrap to learn how to do this.
