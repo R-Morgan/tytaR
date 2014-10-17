@@ -29,4 +29,11 @@ of how much specification is necessary to construct even basic graphs.
 2) I use the <- as the assignment operator, rather than the '='. This is a tiny
 difference that does not make a huge difference in the actual operation of the
 commands, but it is considered the stylistically correct way to to this by the
-R-tian community.>
+R-tian community.
+
+3) I am *ridiculously* explicit about the parts of many lines of code in here.
+There is around a 5 to 1 ratio of explanation to code. Experienced programmers
+may find this off-putting. To this I say, tough. If you already can programme,
+this is not necessarily the best learning materials for you. The intended
+audience, students taking social-science oriented quantitative analysis courses
+at PSU, are generally not programming already. 
