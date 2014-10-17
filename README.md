@@ -1,4 +1,4 @@
-tytaR is my R teaching/tutoring repository. 'Tytar' is a Finnish-English
+qytaR is my R teaching/tutoring repository. 'Tytar' is a Finnish-English
 bilingual pun. Currently, the intended audience is anyone taking Portland State
 University's PSY 621, Univariate Statistics class. 
 
