@@ -201,7 +201,7 @@ p + geom_point() + geom_smooth(method = "lm")
 # This command does just that! geom_smooth() portion of the command is what does
 # this. What do you notice about the 'method' argument? What happens if you
 # leave it out entirely? Research what this method of smoothing is.
-# 
+ 
 
 socHistCor <- with(academicData2, cor(SOCGPA, HISTGPA))
 
@@ -256,5 +256,32 @@ p2 + geom_point() + geom_smooth(method = "lm") + ylab("Social Studies and Histor
 # for the x-axis?  Find out how to add a title to a ggplot.
 
 
+################
+# EXTRA CREDIT #
+################
+#
+#
+#
+# Although R comes prepackaged with a variety of basic statistical functions,
+# such as var(), cor(), sd(), and so on, it can be useful to reimplement these
+# functions yourself.  Doing so can help you check your own understanding of the
+# statistical operations. For example, you might implement your own mean function
+# like so:
+
+myMean <- function(data){ 
+    summed <- sum(data)                # Stores sum of all vector elements
+    dataLen <- length(data)            # Stores the length of data. Why do this?
+    average <- summed / dataLen        # Computes man
+    return(average)                    # Explicit return statemennt
+}
+
+# Try doing this with a more complex operation, such as computing the variance
+# of a vector. If you do this, it will be very easy to implement your own
+# standard deviation, covariance, and correlation functions.
+#
+#
+# Write any functions that come to mind for things you are doing often. You can
+# chain several different operations together, such as printing to the console,
+# calculating a statistic, and generating a graph of some sort.
 
 
