@@ -110,25 +110,25 @@ for (i in iterations){                      # For each i(tem) in iterations
     print(paste("Iteration:", i))
 }
 
-# Let's break this down line by line. In 110, we need to set the number of times
+# Let's break this down line by line. In 102, we need to set the number of times
 # the loop will run. By measuring the length of the names of the columns, we can
 # determine this. I hope 'why' exactly this is will become more apparent. 
 #
-# In 113 is the for() loop declaration -- as stated above, 'i' is an arbitrary
+# In 106 is the for() loop declaration -- as stated above, 'i' is an arbitrary
 # variable.
 #
-# In 114 is the first command executed in the loop. It prints out the element of
+# In 107 is the first command executed in the loop. It prints out the element of
 # 'colnames' specified by 'i' -- e.g., colnames[1], colnames[2], and so on.
 #
-# Line 115 prints a function we've already seen -- mean(). In R, it is sometimes
+# Line 108 prints a function we've already seen -- mean(). In R, it is sometimes
 # possible to nest functions like this. For instance, here, we are taking the
 # mean of one column in the dataframe 'academicData1'. Instead of accessing the
 # data in each column with it's English name (e.g. CITES), we use R's capability
 # to specify it like acadmicData[ , 1].
 #
-# Line 116 does a similar thing with sd().
+# Line 109 does a similar thing with sd().
 #
-# Line 117 is a bit strange. We need to concatenate a string with an integer and
+# Line 110 is a bit strange. We need to concatenate a string with an integer and
 # print it out to the the console. To do this, you can use paste(). It doesn't
 # have a fixed argument structure, so you may want to experiment with it or look
 # at examples of paste() usage.
