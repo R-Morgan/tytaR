@@ -164,7 +164,6 @@ meanAndSD <- function(dataframe){
 
 meanAndSD(academicData1)
 
-
 # Perhaps the most mysterious parts of the function declaration exist in the 
 # first line. 'meanAndSD' is the name of the function. What is in the function()
 # portion, 'dataframe', is another placeholder name. Putting 'dataframe' there
@@ -173,9 +172,6 @@ meanAndSD(academicData1)
 # arguments like this. For instance, one could put in 'einneerwww', and so long
 # as that exact sequences goes wherever 'dataframe' is within our function, it
 # would work. Try it to prove it to yourself.
-
-# Now we'll want some graphics that are more specific than the ggpairs() function
-# provides. We'll use the academicData2 set for this.
 
 for (i in iterations){ 
     for (j in i:length(iterations)){ 
@@ -189,6 +185,9 @@ for (i in iterations){
 # This is a complex little for() loop. What happens when you run it? 
 # This sort of double for() loop, with multiple fors is a 'nested for() loop'.
 # More coming on this topic.
+
+# Now we'll want some graphics that are more specific than the ggpairs() function
+# provides. We'll use the academicData2 set for this.
 
 p <- ggplot(academicData2, aes(x = HISTGPA, y = SCIENGPA))
 # What is happening here?  Why store the base plot in a variable?
