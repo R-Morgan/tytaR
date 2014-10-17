@@ -67,17 +67,6 @@ with(academicData1, cor.test(NUM_PUBS, CITES))
 # point.  for() loops are simply a way of doing something to all elements of
 # vector (or potentially another type of data structure).
 
-x <- c(1:10)
-# Storing this vector of allows for a sort of limite on the number of times the 
-# loop will run.
-
-for (i in x){                            # For each i in x
-  print(sprintf("This is i: %d\n", i)    # Do this command)
-  i <- i + 1                             # Increment i
-}
-
-# Bad example much too abstract and C-like
-
 for (publications in academicData1$NUM_PUBS){ 
   print(publications)
 }
@@ -190,12 +179,17 @@ meanAndSD(academicData1)
 
 for (i in iterations){ 
     for (j in i:length(iterations)){ 
+
         if (i == j) next
 
         print(cor.test(academicData1[ ,i], academicData1 [ , j]))
     }
+
 }
-#
+# This is a complex little for() loop. What happens when you run it? 
+# This sort of double for() loop, with multiple fors is a 'nested for() loop'.
+# More coming on this topic.
+
 p <- ggplot(academicData2, aes(x = HISTGPA, y = SCIENGPA))
 # What is happening here?  Why store the base plot in a variable?
 
